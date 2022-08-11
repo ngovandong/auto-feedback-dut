@@ -1,6 +1,6 @@
 *** Variables ***
-${username}    12345...
-${password}    ********
+${username}    your_username
+${password}    your_password
 *** Settings ***
 Library             SeleniumLibrary
 Library             String
