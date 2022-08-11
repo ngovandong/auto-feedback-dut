@@ -14,10 +14,10 @@ Task Teardown       Close Browser
 Auto Feedback
     Login    ${username}    ${password}
     Evaluate Subjects
-
 *** Keywords ***
 Setup chromedriver
     ${system}=    Evaluate    platform.system()    platform
+    Append To Environment Variable    PATH    ${EXECDIR}
     IF    '${system}' == 'Linux'
         Set Environment Variable    webdriver.chrome.driver  ${EXECDIR}/chromedriver
     ELSE
@@ -31,7 +31,6 @@ Login
     Input Password    id:DN_txtPass    ${password}
     Click Button    id:QLTH_btnLogin
     Go To    http://fb.dut.udn.vn/PageLopHP.aspx
-
 Evaluate Subjects
     ${subjects}=    Get WebElements    css:.GridCell.Evaluation
     @{ids}=    Create List
@@ -46,8 +45,6 @@ Evaluate Subjects
         Go To Evaluate Page    ${id}
         Sleep    2s
     END
-
-
 Go To Evaluate Page
     [Arguments]    ${id}
     Go To    http://fb.dut.udn.vn/PageDanhGiaCA.aspx?Loai=CK&LopHP=${id}
@@ -55,6 +52,7 @@ Go To Evaluate Page
     FOR    ${answer}    IN    @{list_second_answer}
         Click Element    ${answer}
     END
+    Execute JavaScript    window.scrollTo(0, -300)
     ${text_areas}    Get WebElements    xpath://textarea
     FOR    ${area}    IN    @{text_areas}
         Clear Element Text    ${area}
@@ -62,4 +60,3 @@ Go To Evaluate Page
     END
     Click Button    id:DG_btnXacNhan
     Click Button    //button[contains(@class,'ui-button-text-only')][1]
-    

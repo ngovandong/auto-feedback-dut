@@ -1,7 +1,7 @@
 ## Requirement
 1. install python3,pip,
 2. OS is Ubuntu or Window
-## Set username, password
+## Set username, password in file autoFeedback.robot
 - Change 12345...  at line 2 to your username
 - Change ******  at line 3 to your password
 ## Setup for Ubuntu
@@ -18,5 +18,6 @@
 4. Install library `pip install -r requirements.txt`
 5. Run `robot autoFeedback.robot`
 6. And wait .................
+7. If fail run `robot autoFeedback.robot` again
 
 
