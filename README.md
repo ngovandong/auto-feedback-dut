@@ -1,6 +1,6 @@
 ## Requirement
-1. install python3,pip,
-2. OS is Ubuntu or Window
+1. install python3, pip, chrome brower
+2. OS is Ubuntu or Windows
 ## Set username, password in file autoFeedback.robot
 - Change 12345...  at line 2 to your username
 - Change ******  at line 3 to your password
@@ -11,7 +11,8 @@
 4. Install library `pip install -r requirements.txt`
 5. Run `robot autoFeedback.robot`
 6. And wait .................
-## Setup for Window
+7. If fail run `robot autoFeedback.robot` again
+## Setup for Windows
 1. Install virtualenv `py -m pip install --user virtualenv`
 2. Create env `py -m venv env`
 3. Activate env `.\env\Scripts\activate`
