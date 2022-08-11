@@ -2,8 +2,8 @@
 1. install python3, pip, chrome brower
 2. OS is Ubuntu or Windows
 ## Set username, password in file autoFeedback.robot
-- Change 12345...  at line 2 to your username
-- Change ******  at line 3 to your password
+- Change your_username  at line 2 to your username
+- Change your_password  at line 3 to your password
 ## Setup for Ubuntu
 1. Install virtualenv `python3 -m pip install --user virtualenv`
 2. Create env `python3 -m venv env`
